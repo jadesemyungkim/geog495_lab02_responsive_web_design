@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+
+    <!-- Including the main.css file for styling -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- Including the Font Awesome CSS library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="video/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Navigation bar -->
+    <div class="topnav" id="myTopnav">
+        <div class="left-nav">
+            <!-- Active link pointing to the index.html page -->
+            <a class="active" href="index.html">Semyung Wiki</a>
+        </div>
+
+        <div class="center-nav">
+            <!-- Links to other sections -->
+            <a class="center-tab" href="index.html">Home</a>
+            <a class="center-tab" href="#">HTML/CSS</a>
+            <a class="center-tab" href="section3.html">JavaScript</a>
+
+            <!-- Additional links
+            <a class="center-tab" href="see_also.html">See Also</a>
+            <a class="center-tab" href="references.html">References</a> -->
+        </div>
+
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links on smaller screens -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+        <div class="content" style="text-align: center; font-size: 47px;">
+            <!-- Main section -->
+
+            <br>
+            <br> <strong>Lightbox Examples
+            <br>  <div style="font-size: 20px; font-weight: lighter;">This is example implementation of Lightbox. Please feel free to click on them to zoom image</div>
+            <br>
+            <br>
+        </div>
+        <div class="box_row">
+            <div class="box_column">
+                <img src="img/html.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="box_column">
+                <img src="img/css.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="box_column">
+                <img src="img/javascript.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+        </div>
+
+        <!-- The Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="img/html.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="img/css.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="img/javascript.jpg" style="width:100%">
+                </div>
+
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="box_column">
+                    <img class="demo" src="img/html.jpg" onclick="currentSlide(1)" alt="HTML">
+                </div>
+
+                <div class="box_column">
+                    <img class="demo" src="img/css.jpg" onclick="currentSlide(2)" alt="CSS">
+                </div>
+
+                <div class="box_column">
+                    <img class="demo" src="img/javascript.jpg" onclick="currentSlide(3)" alt="JavaScript">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Including the main.js file for JavaScript functionality -->
+    <script src="js/main.js">
+    </script>
+
+</body>
+
+</html>
